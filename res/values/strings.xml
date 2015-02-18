@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RememberStuff</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_new_stuff">Add New Stuff</string>
+    <string name="no_stuff_present">There is no stuff. \n\nClick on \'Cross\' icon at the top to add stuff to remember.</string>
+    <string name="title_txt_help">Enter Stuff Name</string>
+    <string name="description_txt_help">Where is this stuff ?</string>
+    <string name="capture_image_btn_txt">Add Image</string>
+    <string name="record_audio_btn_txt">Add Audio</string>
+    <string name="add_stuff_activity_title">Add New Stuff</string>
+    <string name="save_btn_txt">SAVE</string>
+    <string name="edit_txt">Edit</string>
+    <string name="delete_txt">DELETE</string>
+    <string name="error_empty_title">Title cannot be left blank.</string>
+    <string name="close">Close</string>
+    <string name="empty_stuff">Stuff name cannot be empty.</string>
+    <string name="cannot_save_stuff_image">Unable to save Image of the stuff.</string>
+    
+    <string name="app_id">1583580578543320</string>
+    <string name="action_fblogin">FB Login</string>
+</resources>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ritambhara.rememberstuff.MainActivity" >
+
+     <item
+        android:id="@+id/action_add_new"
+        android:showAsAction="always"
+        android:title="@string/add_new_stuff"
+        android:icon="@drawable/plus"/>
+     
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100" 
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+
+</menu>
