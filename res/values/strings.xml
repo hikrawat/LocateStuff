@@ -20,4 +20,6 @@
     
     <string name="app_id">1583580578543320</string>
     <string name="action_fblogin">FB Login</string>
+    <string name="edit_image_text">Edit Image</string>
+    <string name="audio_text_eddit">Edit Audio</string>
 </resources>

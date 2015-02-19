@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+       android:id="@+id/stuffImageContainer"
+       android:layout_height="@dimen/STUFF_IMAGE_BRDR_HEIGHT"
+  	    android:layout_width="@dimen/STUFF_IMAGE_BRDR_WIDTH"
+       android:background="@color/image_border_color"
+  	    android:layout_alignParentLeft="true"
+  	    android:layout_centerInParent="true"
+       android:orientation="vertical">
+   
+   <ImageView 
+   	    android:id="@+id/stuffItemImage"
+   	    android:layout_height="@dimen/STUFF_IMAGE_HEIGHT"
+   	    android:layout_width="@dimen/STUFF_IMAGE_WIDTH"
+   	    android:scaleType="centerCrop"
+   	    android:layout_centerInParent="true"
+   	    />
+   
+    <RelativeLayout
+        android:id="@+id/stuffImageTransparentBottomView"
+        android:layout_width="@dimen/STUFF_IMAGE_WIDTH"
+        android:layout_height="@dimen/STUFF_IMAGE_BOTTOM_BAR_HEIGHT"
+        android:background="@drawable/transparent_view_black"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/stuffItemImage"
+        android:layout_alignLeft="@+id/stuffItemImage"
+        android:layout_alignRight="@+id/stuffItemImage"
+        >
+        
+	    <TextView
+	        android:id="@+id/editImageText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:ellipsize="end"
+	        android:gravity="left|center_vertical"
+	        android:singleLine="true"
+	        android:textColor="@color/white"
+	        android:textSize="13sp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:paddingLeft="5dp"
+	        android:paddingRight="5dp"
+	        android:text="@string/edit_image_text"
+	        android:textStyle="bold" />
+	</RelativeLayout>
+</RelativeLayout>

@@ -9,6 +9,7 @@
     android:background="@color/app_background"
     tools:context="com.ritambhara.rememberstuff.MainActivity" >
 
+    <!--  No Stuff layout -->
     <RelativeLayout 
         android:id="@+id/noStuffViewsContainer"
         android:layout_width="match_parent"
@@ -38,11 +39,12 @@
         
     </RelativeLayout>
     
+    <!--  List of all the stuff shown in the main screen. Its item is in stuff_list_item.xml -->
     <ListView android:id="@+id/stuffList"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:divider="@android:color/transparent"
-  		android:dividerHeight="10.0sp"
-        ></ListView>
+        android:dividerHeight="1.0sp"
+  		android:divider="@color/list_divider_color"
+  		></ListView>
     
 </RelativeLayout>

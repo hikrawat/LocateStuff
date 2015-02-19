@@ -62,7 +62,11 @@ public class StuffListAdapter extends BaseAdapter
 	public View getView(int position, View convertView, ViewGroup parent) 
 	{
 		LayoutInflater inflater = (LayoutInflater) ApplicationModel.getInstance().getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View rowView = inflater.inflate(R.layout.stuff_list_item, parent, false);
+		View rowView = null;
+//		if(position%2 == 0)
+			rowView = inflater.inflate(R.layout.stuff_list_item, parent, false);
+//		else
+//			rowView = inflater.inflate(R.layout.stuff_list_item_alternate, parent, false);
 		
 		ImageView iv = (ImageView)rowView.findViewById(R.id.stuffItemImage);
 		TextView titleView = (TextView)rowView.findViewById(R.id.stuffItemTitle);

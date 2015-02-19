@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <RelativeLayout 
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/saveBtnContainer"
+      android:layout_width="wrap_content"
+      android:layout_toRightOf="@+id/stuffImageContainer"
+      android:layout_height="@dimen/STUFF_IMAGE_BRDR_HEIGHT"
+      android:layout_marginLeft="0dp"
+      android:paddingLeft="15dp"
+      android:paddingTop="0dp"
+      android:background="@color/image_border_color"
+      android:orientation="vertical">
+  
+   <TextView android:id="@+id/stuffItemTitle"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:textSize="18sp"
+       android:layout_gravity="top"
+       android:textStyle="bold"
+       android:textColor="@color/title_text_color"
+       android:singleLine="true"
+       android:layout_marginRight="10dp"
+       android:paddingTop="2dp"
+      	android:layout_alignParentTop="true"/>
+   
+	<TextView android:id="@+id/stuffItemDescription"
+	       android:layout_height="wrap_content"
+	       android:layout_width="wrap_content"
+	       android:textSize="12sp"
+	       android:textColor="@color/title_descr_color"
+	       android:singleLine="true"
+	       android:maxLength="95"
+	       android:layout_marginRight="10dp"
+	       android:paddingTop="0dp"
+	          android:layout_below="@+id/stuffItemTitle"/>
+	
+	<LinearLayout 
+	    android:id="@+id/audioControlsContainer"
+	    android:orientation="horizontal"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingBottom="5dp"
+	    android:paddingRight="5dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/stuffItemDescription"
+		 >
+		<ImageView 
+		   	    android:id="@+id/stuffItemAudioImage"
+		   	    android:layout_height="35dp"
+		   	    android:layout_width="35dp"
+		   	    android:scaleType="fitXY"
+		   	    android:src="@drawable/audio_alt_1"
+		   	    android:layout_marginRight="0dp"
+		   	    android:paddingTop="5dp"
+		   	    />
+		
+		<TextView android:id="@+id/stuffItemAudioTxt"
+	       android:layout_height="wrap_content"
+	       android:layout_width="wrap_content"
+	       android:textSize="12sp"
+	       android:textColor="@color/hyper_link_txt"
+	       android:singleLine="true"
+	       android:layout_marginLeft="10dp"
+	       android:text="@string/audio_text_eddit"
+	       android:paddingTop="0dp"/>
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:id="@+id/buttonContainer"
+	    android:orientation="horizontal"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingBottom="5dp"
+	    android:paddingRight="5dp"
+	    android:layout_alignParentBottom="true">
+	    
+	    <Button
+	           android:id="@+id/btnStuffItemEdit"
+	           android:layout_width="wrap_content"
+	           android:layout_height="25dp"
+	           android:background="@drawable/button_unacitivy"
+	           android:gravity="center"
+	           android:paddingLeft="5dp"
+	           android:paddingRight="5dp"
+	           android:textColor="@color/white"
+	           android:text="@string/edit_txt"
+	           android:layout_alignParentLeft="true"
+	           android:textSize="12sp" />
+	   
+	    <Button
+	           android:id="@+id/btnStuffItemDelete"
+	           android:layout_width="wrap_content"
+	           android:layout_height="25dp"
+	           android:background="@drawable/button_red"
+	           android:gravity="center"
+	           android:paddingLeft="5dp"
+	           android:paddingRight="5dp"
+	           android:layout_marginLeft="10dp"
+	           android:textColor="@color/white"
+	           android:text="@string/delete_txt"
+	           android:textSize="12sp"
+	           android:layout_toRightOf="@+id/btnStuffItemEdit"
+	           android:layout_alignParentRight="true"/>
+	   
+	</LinearLayout>
+</RelativeLayout>

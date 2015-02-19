@@ -1,114 +1,13 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:orientation="horizontal"
     tools:context="com.ritambhara.rememberstuff.MainActivity" >
     
-    <RelativeLayout 
-        android:id="@+id/stuffImageContainer"
-        android:layout_height="@dimen/STUFF_IMAGE_BRDR_HEIGHT"
-   	    android:layout_width="@dimen/STUFF_IMAGE_BRDR_WIDTH"
-        android:background="@color/image_border_color"
-   	    android:layout_alignParentLeft="true"
-   	    android:layout_centerInParent="true"
-        android:orientation="vertical">
+	<include layout="@layout/stuff_list_item_image"/>
+    <include layout="@layout/stuff_list_item_descr"/>
     
-	   <ImageView 
-	   	    android:id="@+id/stuffItemImage"
-	   	    android:layout_height="@dimen/STUFF_IMAGE_HEIGHT"
-	   	    android:layout_width="@dimen/STUFF_IMAGE_WIDTH"
-	   	    android:scaleType="centerCrop"
-	   	    android:layout_centerInParent="true"
-	   	    />
-	</RelativeLayout>
-    
-    <RelativeLayout 
-        android:id="@+id/saveBtnContainer"
-        android:layout_width="fill_parent"
-        android:layout_toRightOf="@+id/stuffImageContainer"
-        android:layout_height="@dimen/STUFF_IMAGE_BRDR_HEIGHT"
-        android:layout_marginLeft="5dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="0dp"
-        android:background="@color/image_border_color"
-        android:orientation="vertical">
-	   
-	    <TextView android:id="@+id/stuffItemTitle"
-	        android:layout_height="wrap_content"
-	        android:layout_width="wrap_content"
-	        android:textSize="16sp"
-	        android:layout_gravity="top"
-	        android:textStyle="bold"
-	        android:textColor="@color/title_text_color"
-	        android:singleLine="true"
-	        android:maxLength="95"
-	        android:layout_marginRight="10dp"
-	        android:paddingTop="2dp"
-        	android:layout_alignParentTop="true"/>
-	    
-		<TextView android:id="@+id/stuffItemDescription"
-	        android:layout_height="wrap_content"
-	        android:layout_width="wrap_content"
-	        android:textSize="12sp"
-	        android:textColor="@color/title_descr_color"
-	        android:singleLine="true"
-	        android:maxLength="95"
-	        android:layout_marginRight="10dp"
-	        android:paddingTop="0dp"
-            android:layout_below="@+id/stuffItemTitle"/>
-		
-		<RelativeLayout 
-		    android:id="@+id/buttonContainer"
-		    android:orientation="horizontal"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:paddingBottom="5dp"
-		    android:paddingRight="5dp"
-		    android:layout_alignParentBottom="true">
-		    
-		   <ImageView 
-		   	    android:id="@+id/stuffItemAudioImage"
-		   	    android:layout_height="27dp"
-		   	    android:layout_width="50dp"
-		   	    android:scaleType="fitXY"
-		   	    android:layout_centerInParent="true"
-		   	    android:src="@drawable/audio"
-		   	    android:layout_alignParentLeft="true"
-		   	    android:layout_marginRight="10dp"
-		   	    android:layout_centerVertical="true"
-		   	    />
-		    
-	   	    <Button
-	            android:id="@+id/btnStuffItemEdit"
-	            android:layout_width="wrap_content"
-	            android:layout_height="25dp"
-	            android:background="@drawable/button_unacitivy"
-	            android:gravity="center"
-	            android:paddingLeft="5dp"
-	            android:paddingRight="5dp"
-	            android:textColor="@color/white"
-	            android:text="@string/edit_txt"
-	            android:textSize="12sp" 
-	            android:layout_toRightOf="@+id/stuffItemAudioImage"/>
-	    
-		    <Button
-	            android:id="@+id/btnStuffItemDelete"
-	            android:layout_width="wrap_content"
-	            android:layout_height="25dp"
-	            android:background="@drawable/button_red"
-	            android:gravity="center"
-	            android:paddingLeft="5dp"
-	            android:paddingRight="5dp"
-	            android:layout_marginLeft="10dp"
-	            android:textColor="@color/white"
-	            android:text="@string/delete_txt"
-	            android:textSize="12sp"
-	            android:layout_toRightOf="@+id/btnStuffItemEdit"
-	            android:layout_alignParentRight="true"/>
-	    
-		</RelativeLayout>
-    </RelativeLayout>
-    
-</RelativeLayout>
+</LinearLayout>
