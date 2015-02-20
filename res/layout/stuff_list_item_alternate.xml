@@ -5,7 +5,7 @@
     android:layout_marginTop="0dp"
     android:layout_marginBottom="0dp"
     android:orientation="horizontal"
-    tools:context="com.ritambhara.rememberstuff.MainActivity" >
+    tools:context="com.ritambhara.locateStuff.MainActivity" >
     <!--  This is how alternate element int he list will be visible-->
     
     <include layout="@layout/stuff_list_item_descr"

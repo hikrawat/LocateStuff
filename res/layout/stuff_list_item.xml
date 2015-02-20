@@ -1,13 +1,85 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="0dp"
-    android:layout_marginBottom="0dp"
-    android:orientation="horizontal"
-    tools:context="com.ritambhara.rememberstuff.MainActivity" >
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:background="@drawable/stuff_layout"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <!-- Featured Game item -->
+
+    <TextView
+        android:id="@+id/stuffItemTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="95"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/game_item_game_title_grey"
+        android:textSize="16sp"
+        android:textStyle="bold" />
     
-	<include layout="@layout/stuff_list_item_image"/>
-    <include layout="@layout/stuff_list_item_descr"/>
+     <Button
+        android:id="@+id/btnStuffItemEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:background="@drawable/button_unacitivy"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/white"
+        android:text="@string/edit_txt"
+        android:layout_alignParentRight="true"
+		android:layout_alignTop="@+id/stuffItemTitle"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/stuffItemImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/stuffItemDescription"
+        android:layout_alignLeft="@+id/stuffItemTitle"
+        android:adjustViewBounds="true"
+        />
     
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/audioLayoutBar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/transparent_view_black"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/stuffItemImage"
+        android:layout_alignLeft="@+id/stuffItemImage"
+        android:layout_alignRight="@+id/stuffItemImage">
+
+       	<ImageView 
+	   	    android:id="@+id/stuffItemAudioImage"
+	   	    android:layout_height="25dp"
+	   	    android:layout_width="25dp"
+	   	    android:scaleType="fitXY"
+	   	    android:src="@drawable/audio_bak"
+	   	    android:layout_marginRight="0dp"
+	   	    android:paddingTop="5dp"
+	   	    />
+		
+		<TextView android:id="@+id/stuffItemAudioTxt"
+	       android:layout_height="wrap_content"
+	       android:layout_width="wrap_content"
+	       android:textSize="12sp"
+	       android:textColor="@color/hyper_link_txt"
+	       android:singleLine="true"
+	       android:layout_marginLeft="10dp"
+	       android:text="@string/audio_text_eddit"
+	       android:layout_gravity="center_vertical"
+	       android:paddingTop="0dp"/>
+            
+    </LinearLayout>
+
+</RelativeLayout>

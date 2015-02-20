@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <color name="app_background">#ffffff</color>
+    <color name="app_background">#cccccc</color>
     <color name="actionbar_background">#1590e8</color>
     <color name="no_stuff_label_color">#575757</color>
     <color name="green_button">#339100</color>
@@ -21,5 +21,7 @@
     <color name="bg_gradient_start">#EB5038</color>
     <color name="bg_gradient_end">#CA3822</color>
     <color name="bg_button_login">#A92815</color>
+    
+    <color name="game_item_game_title_grey">#37363c</color>
 </resources>
 

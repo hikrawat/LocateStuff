@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">RememberStuff</string>
+    <string name="app_name">LocateStuff</string>
     <string name="action_settings">Settings</string>
     <string name="add_new_stuff">Add New Stuff</string>
     <string name="no_stuff_present">There is no stuff. \n\nClick on \'Cross\' icon at the top to add stuff to remember.</string>
