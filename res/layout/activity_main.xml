@@ -43,11 +43,22 @@
     <ListView android:id="@+id/stuffList"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:dividerHeight="4.0sp"
+        android:divider="@color/app_background"
+  		></ListView> 
+    
+    <!--  List of all the stuff shown in the main screen. Its item is in stuff_list_item.xml 
+    <GridView android:id="@+id/stuffList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
         android:layout_marginTop="5dp"
         android:dividerHeight="8.0sp"
+        android:numColumns="2"
         android:divider="@color/app_background"
-  		></ListView>
-    
+  		></GridView>-->
 </RelativeLayout>

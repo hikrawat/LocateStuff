@@ -4,10 +4,11 @@
     <string name="app_name">LocateStuff</string>
     <string name="action_settings">Settings</string>
     <string name="add_new_stuff">Add New Stuff</string>
+    <string name="delete_stuff">Delete Stuff</string>
     <string name="no_stuff_present">There is no stuff. \n\nClick on \'Cross\' icon at the top to add stuff to remember.</string>
     <string name="title_txt_help">Enter Stuff Name</string>
     <string name="description_txt_help">Where is this stuff ?</string>
-    <string name="capture_image_btn_txt">Add Image</string>
+    <string name="capture_image_btn_txt">Change Image</string>
     <string name="record_audio_btn_txt">Add Audio</string>
     <string name="add_stuff_activity_title">Add New Stuff</string>
     <string name="save_btn_txt">SAVE</string>
@@ -20,6 +21,23 @@
     
     <string name="app_id">1583580578543320</string>
     <string name="action_fblogin">FB Login</string>
-    <string name="edit_image_text">Edit Image</string>
-    <string name="audio_text_eddit">Edit Audio</string>
+    <string name="add_image_text">Add Image</string>
+    <string name="add_audio_text">Add Audio</string>
+    <string name="change_image_text">Change Image</string>
+    <string name="change_audio_text">Change Audio</string>
+    <string name="audio_text_not_present">Add Audio</string>
+    
+    <string name="color_picker_dlg_title">Color Picker</string>
+    <string name="stuff_background_color">Background Color</string>
+    <string name="add_image_separator_title">Stuff Image</string>
+    <string name="add_audio_separator_title">Stuff Audio</string>
+    <string name="background_color_separator_title">Background Color</string>
+    <string name="no_audio_txt">No Audio</string>
+    <string name="play_audio_txt">Play Audio</string>
+    
+  	<!--  Time related String  -->
+	<string name="seconds_ago">seconds ago</string>
+	<string name="minutes_ago">minutes ago</string>
+	<string name="hours_ago">hours ago</string>
+	<string name="today_at">today at</string>
 </resources>

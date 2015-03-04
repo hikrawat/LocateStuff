@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ritambhara.rememberstuff"
+    package="com.ritambhara.locateStuff"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -23,7 +23,7 @@
             android:value="@string/app_id" />
             
         <activity
-            android:name=".MainActivity"
+            android:name="com.ritambhara.locateStuff.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,35 +31,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name="com.ritambhara.locateStuff.SettingsActivity"
             android:label="@string/action_settings">
            
         </activity>
         
         <activity
-            android:name=".FacebookLoginActivity"
+            android:name="com.ritambhara.locateStuff.FacebookLoginActivity"
             android:label="@string/action_fblogin">
         </activity>
         
         <activity
-            android:name=".AddStuffActivity"
+            android:name="com.ritambhara.locateStuff.AddStuffActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/add_stuff_activity_title">
            
         </activity>
         
         <activity
-            android:name=".FullScreenViewActivity"
+            android:name="com.ritambhara.locateStuff.FullScreenViewActivity"
             android:theme="@android:style/Theme.Holo.NoActionBar">
         </activity>
         
         <activity
-            android:name=".FullScreenVideoActivity"
+            android:name="com.ritambhara.locateStuff.FullScreenVideoActivity"
             android:theme="@android:style/Theme.Holo.NoActionBar">
         </activity>
         
         <activity    
-            android:name=".AudioRecordActivity"
+            android:name="com.ritambhara.locateStuff.AudioRecordActivity"
             android:theme="@android:style/Theme.Holo.NoActionBar">
         </activity>
         

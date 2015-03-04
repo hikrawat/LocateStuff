@@ -6,8 +6,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/audio_alt_1" />
+        android:layout_gravity="center" />
  
     <LinearLayout
         android:id="@+id/other_views"

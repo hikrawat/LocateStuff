@@ -6,12 +6,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ritambhara.locateStuff.MainActivity" >
+    tools:context="com.ritambhara.locateStuff.MainActivity" 
+	android:orientation="vertical"
+	android:overScrollMode="ifContentScrolls"
+	android:scrollbarStyle="insideOverlay"
+	android:scrollbars="vertical">
     
     <LinearLayout 
         android:id="@+id/saveBtnContainer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:orientation="horizontal">
         
 	    <EditText android:id="@+id/titleTxt"
@@ -51,37 +57,165 @@
         android:padding="7dp"
         android:background="@drawable/textbox_default"
         android:singleLine="true"
+        android:layout_marginLeft="10dp"
         android:maxLength="1020"/>
-   
-   <LinearLayout 
-        android:id="@+id/recordBtnContainer"
+
+    <!-- Stuff Image -->
+    <RelativeLayout 
+        android:id="@+id/addStuffImageContainer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/descriptionTxt"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+   	    android:layout_below="@+id/descriptionTxt"
+        android:layout_alignParentLeft="true" >
+    
+        <!--  Top separator -->
+        <LinearLayout 
+            android:id="@+id/addStuffImageTopDivider"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical">
+            
+            <View 
+	           android:id="@+id/addStuffImageTopDivider1"
+	           android:layout_width="10dp"
+	           android:layout_marginTop="2dp"
+	           android:layout_height="1dp"
+	           android:layout_gravity="center_vertical"
+	           android:background="@color/stuff_item_separator"/>
+            
+            <TextView android:id="@+id/addStuffImageTopDivider2"
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:textSize="12sp"
+		        android:textColor="@color/title_descr_color"
+		        android:singleLine="true"
+		        android:layout_marginLeft="2dp"
+		        android:layout_marginRight="2dp"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/add_image_separator_title"/>
+            
+            <View 
+	           android:id="@+id/addStuffImageTopDivider3"
+	           android:layout_width="fill_parent"
+	           android:layout_marginTop="2dp"
+	           android:layout_height="1dp"
+	           android:layout_gravity="center_vertical"
+	           android:background="@color/stuff_item_separator"/>
+            
+        </LinearLayout>
         
-	    <Button
+	   <ImageView 
+	   	    android:id="@+id/stuffImage"
+	   	    android:layout_height="@dimen/STUFF_IMAGE_HEIGHT"
+	   	    android:layout_width="@dimen/STUFF_IMAGE_WIDTH"
+	   	    android:scaleType="centerCrop"
+	   	    android:layout_marginLeft="15dp"
+	   	    android:onClick="onImageClick"
+	   	    android:layout_below="@+id/addStuffImageTopDivider"
+			android:layout_alignParentLeft="true"/>
+	
+	   <Button
             android:id="@+id/btnImageCapture"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:background="@drawable/button_unacitivy"
-            android:gravity="center"
             android:minWidth="100dp"
             android:textColor="@color/white"
-            android:text="@string/capture_image_btn_txt"
+            android:text="@string/add_image_text"
             android:textSize="12sp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:onClick="captureImageBtnHandler"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/addStuffImageTopDivider"
+            android:gravity="center"
             android:textStyle="bold" />
-	    
-	    <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            />   
+	</RelativeLayout>
+   
+   <!-- Stuff Audio -->
+   <RelativeLayout 
+        android:id="@+id/recordBtnContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addStuffImageContainer"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+       
+       <!--  Top separator -->
+        <LinearLayout 
+            android:id="@+id/addStuffAudioTopDivider"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical">
             
+            <View 
+	           android:id="@+id/addStuffAudioTopDivider1"
+	           android:layout_width="10dp"
+	           android:layout_marginTop="2dp"
+	           android:layout_height="1dp"
+	           android:layout_gravity="center_vertical"
+	           android:background="@color/stuff_item_separator"/>
+            
+            <TextView android:id="@+id/addStuffAudioTopDivider2"
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:textSize="12sp"
+		        android:textColor="@color/title_descr_color"
+		        android:singleLine="true"
+		        android:layout_marginLeft="2dp"
+		        android:layout_marginRight="2dp"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/add_audio_separator_title"/>
+            
+            <View 
+	           android:id="@+id/addStuffAudioTopDivider3"
+	           android:layout_width="fill_parent"
+	           android:layout_marginTop="2dp"
+	           android:layout_height="1dp"
+	           android:layout_gravity="center_vertical"
+	           android:background="@color/stuff_item_separator"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+			android:layout_height="@dimen/STUFF_IMAGE_HEIGHT"
+	   	    android:layout_width="@dimen/STUFF_IMAGE_WIDTH"
+            android:layout_below="@+id/addStuffAudioTopDivider"
+            android:background="@color/audio_btn_background"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+            
+            <ImageView 
+		   	    android:id="@+id/stuffItemAudioImage"
+		   	    android:layout_height="60dp"
+		   	    android:layout_width="60dp"
+		   	    android:scaleType="fitXY"
+		   	    android:layout_gravity="center"
+		   	    android:layout_marginTop="15dp"
+		   	    android:onClick="onPlayAudioClick"
+	   	    />
+            
+            <TextView android:id="@+id/stuffItemNoAudioText"
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:textSize="12sp"
+		        android:textColor="@color/title_descr_color"
+		        android:singleLine="true"
+		        android:layout_gravity="center_horizontal"
+		        android:text="@string/no_audio_txt"
+		        android:layout_marginTop="10dp"
+		        android:visibility="visible"/>
+        </LinearLayout>
+       
+       
 	    <Button
             android:id="@+id/btnRecordAudio"
             android:layout_width="wrap_content"
@@ -91,23 +225,85 @@
             android:minWidth="100dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
-            android:text="@string/record_audio_btn_txt"
+            android:text="@string/add_audio_text"
             android:textSize="12sp"
             android:onClick="recordAudioBtnHandler"
-            android:textStyle="bold" />
+            android:textStyle="bold" 
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/addStuffAudioTopDivider"
+            android:layout_marginRight="10dp"/>
 	    
-    </LinearLayout>
+    </RelativeLayout>
    
-   <ImageView 
-       android:id="@+id/stuffImage"
-       android:layout_alignLeft="@+id/recordBtnContainer"
-       android:layout_alignRight="@+id/recordBtnContainer"
-       android:layout_below="@+id/recordBtnContainer"
-       android:layout_marginTop="10dp"
-       android:scaleType="centerCrop"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-       android:onClick="onImageClick"
-       android:adjustViewBounds="true"
-       />
+   <!-- Background Color Picker -->
+   <RelativeLayout 
+        android:id="@+id/bgColorContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recordBtnContainer"
+        android:layout_marginTop="0dp">
+   
+       <!--  Top separator -->
+        <LinearLayout 
+            android:id="@+id/backgroundColorTopDivider"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical">
+            
+            <View 
+	           android:id="@+id/backgroundColorTopDivider1"
+	           android:layout_width="10dp"
+	           android:layout_marginTop="2dp"
+	           android:layout_height="1dp"
+	           android:layout_gravity="center_vertical"
+	           android:background="@color/stuff_item_separator"/>
+            
+            <TextView android:id="@+id/backgroundColorTopDivider2"
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:textSize="12sp"
+		        android:textColor="@color/title_descr_color"
+		        android:singleLine="true"
+		        android:layout_marginLeft="2dp"
+		        android:layout_marginRight="2dp"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/background_color_separator_title"/>
+            
+            <View 
+	           android:id="@+id/backgroundColorTopDivider3"
+	           android:layout_width="fill_parent"
+	           android:layout_marginTop="2dp"
+	           android:layout_height="1dp"
+	           android:layout_gravity="center_vertical"
+	           android:background="@color/stuff_item_separator"/>
+            
+        </LinearLayout>
+        
+       <View 
+           android:id="@+id/backgroundColor"
+           android:layout_height="@dimen/STUFF_IMAGE_HEIGHT"
+	   	    android:layout_width="@dimen/STUFF_IMAGE_WIDTH"
+           android:background="@drawable/color_box"
+           android:layout_below="@+id/backgroundColorTopDivider"
+           android:layout_alignParentLeft="true"
+           android:layout_marginLeft="15dp"
+           />
+       
+      <ImageView 
+	        android:id="@+id/btnColorPicker"
+	        android:layout_width="30dp"
+	        android:layout_height="30dp"
+	        android:clickable="true"
+	        android:layout_gravity="center_vertical"
+	        android:src="@drawable/color_picker"
+	        android:layout_below="@+id/backgroundColorTopDivider"
+	        android:layout_marginRight="10dp"
+	        android:layout_alignParentRight="true"
+	        />
+   </RelativeLayout>
 </RelativeLayout>

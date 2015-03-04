@@ -1,85 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/gameLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingTop="5dp"
-    android:background="@drawable/stuff_layout"
-    android:descendantFocusability="blocksDescendants"
-    android:orientation="vertical" >
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    tools:context="com.ritambhara.rememberstuff.MainActivity" >
+    
+    <!--  Left side of the layout showing the Image and EditImage bar at the bottom of the Image -->
+    <RelativeLayout 
+        android:id="@+id/stuffImageContainer"
+        android:layout_height="@dimen/STUFF_IMAGE_BRDR_HEIGHT"
+   	    android:layout_width="@dimen/STUFF_IMAGE_BRDR_WIDTH"
+        android:background="@color/image_border_color"
+   	    android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+    
+	   <ImageView 
+	   	    android:id="@+id/stuffItemImage"
+	   	    android:layout_height="@dimen/STUFF_IMAGE_HEIGHT"
+	   	    android:layout_width="@dimen/STUFF_IMAGE_WIDTH"
+	   	    android:scaleType="centerCrop"
+	   	    android:layout_centerInParent="true"
+	   	    />
+	   
+	   <LinearLayout
+	        android:id="@+id/audioLayoutBar"
+	        android:layout_width="match_parent"
+	        android:layout_height="30dp"
+	        android:background="@drawable/transparent_view_black"
+	        android:orientation="horizontal"
+	        android:layout_alignBottom="@+id/stuffItemImage"
+	        android:layout_alignLeft="@+id/stuffItemImage"
+	        android:layout_alignRight="@+id/stuffItemImage">
 
-    <!-- Featured Game item -->
-
-    <TextView
-        android:id="@+id/stuffItemTitle"
+	   <TextView android:id="@+id/stuffItemAudioTxt"
+		       android:layout_height="wrap_content"
+		       android:layout_width="wrap_content"
+		       android:textSize="12sp"
+		       android:textColor="@color/edit_image_txt"
+		       android:singleLine="true"
+		       android:layout_marginLeft="10dp"
+		       android:text="@string/change_image_text"
+		       android:layout_gravity="center_vertical"
+		       android:paddingTop="0dp"/>
+            
+ 	   </LinearLayout>
+	</RelativeLayout>
+    
+    <!-- Right side of the list Item which has descriptiono of the stuff (along with Play Audio and EditStuff functionality -->
+    <RelativeLayout 
+        android:id="@+id/stuffDiscrContainer"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:maxLength="95"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="10dp"
-        android:ellipsize="end"
-        android:singleLine="true"
-        android:textColor="@color/game_item_game_title_grey"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-    
-     <Button
-        android:id="@+id/btnStuffItemEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:background="@drawable/button_unacitivy"
-        android:gravity="center"
-        android:paddingLeft="5dp"
-        android:paddingRight="10dp"
-        android:textColor="@color/white"
-        android:text="@string/edit_txt"
-        android:layout_alignParentRight="true"
-		android:layout_alignTop="@+id/stuffItemTitle"
-        android:textSize="12sp" />
-
-    <ImageView
-        android:id="@+id/stuffItemImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="6dp"
-        android:scaleType="centerCrop"
-        android:layout_below="@+id/stuffItemDescription"
-        android:layout_alignLeft="@+id/stuffItemTitle"
-        android:adjustViewBounds="true"
-        />
-    
-    <LinearLayout
-        android:id="@+id/audioLayoutBar"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@drawable/transparent_view_black"
-        android:orientation="horizontal"
-        android:layout_alignBottom="@+id/stuffItemImage"
-        android:layout_alignLeft="@+id/stuffItemImage"
-        android:layout_alignRight="@+id/stuffItemImage">
-
-       	<ImageView 
+        android:layout_toRightOf="@+id/stuffImageContainer"
+        android:layout_height="@dimen/STUFF_IMAGE_BRDR_HEIGHT"
+        android:layout_margin="0dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="0dp"
+        android:background="@color/image_border_color"
+        android:orientation="vertical">
+	   
+        <!-- Title of the Stuff -->
+	    <TextView android:id="@+id/stuffItemTitle"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:textSize="16sp"
+	        android:layout_gravity="top"
+	        android:textStyle="bold"
+	        android:textColor="@color/title_text_color"
+	        android:singleLine="true"
+	        android:maxLength="95"
+	        android:layout_marginRight="10dp"
+	        android:paddingTop="2dp"
+        	android:layout_alignParentTop="true"/>
+	    
+	    <!-- Stuff Description -->
+		<TextView android:id="@+id/stuffItemDescription"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:textSize="12sp"
+	        android:textColor="@color/title_descr_color"
+	        android:singleLine="true"
+	        android:maxLength="95"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:paddingTop="0dp"
+            android:layout_below="@+id/stuffItemTitle"/>
+		
+		<!-- Play Audio Image/Button. It will have no Audio -->
+		<ImageView 
 	   	    android:id="@+id/stuffItemAudioImage"
-	   	    android:layout_height="25dp"
-	   	    android:layout_width="25dp"
+	   	    android:layout_height="30dp"
+	   	    android:layout_width="30dp"
 	   	    android:scaleType="fitXY"
-	   	    android:src="@drawable/audio_bak"
-	   	    android:layout_marginRight="0dp"
-	   	    android:paddingTop="5dp"
+	   	    android:layout_centerInParent="true"
+	   	    android:src="@drawable/play_audio"
+	   	    android:layout_alignParentLeft="true"
+	   	    android:layout_margin="0dp"
+	   	    android:padding="0dp"
+	   	    android:layout_below="@+id/stuffItemDescription"
 	   	    />
 		
-		<TextView android:id="@+id/stuffItemAudioTxt"
-	       android:layout_height="wrap_content"
-	       android:layout_width="wrap_content"
-	       android:textSize="12sp"
-	       android:textColor="@color/hyper_link_txt"
-	       android:singleLine="true"
-	       android:layout_marginLeft="10dp"
-	       android:text="@string/audio_text_eddit"
-	       android:layout_gravity="center_vertical"
-	       android:paddingTop="0dp"/>
-            
-    </LinearLayout>
-
+		<!-- Edit Audio/NoAudio -->
+		<TextView android:id="@+id/stuffItemPlayAudioTxt"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:textSize="12sp"
+	        android:singleLine="true"
+	        android:maxLength="55"
+	        android:paddingLeft="5dp"
+	        android:layout_marginTop="6dp"
+	        android:text="@string/change_audio_text"
+	        android:layout_toRightOf="@+id/stuffItemAudioImage"
+	        android:layout_below="@+id/stuffItemDescription"/>
+		
+		<RelativeLayout 
+		    android:id="@+id/buttonContainer"
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingBottom="5dp"
+		    android:paddingRight="5dp"
+		    android:layout_alignParentBottom="true">
+		     <Button
+	            android:id="@+id/btnStuffItemEdit"
+	            android:layout_width="wrap_content"
+	            android:layout_height="25dp"
+	            android:background="@drawable/button_unacitivy"
+	            android:gravity="center"
+	            android:paddingLeft="5dp"
+	            android:paddingRight="5dp"
+	            android:textColor="@color/white"
+	            android:text="@string/edit_txt"
+	            android:textSize="12sp" 
+	            android:layout_alignParentRight="true"
+	            />
+	    </RelativeLayout>
+    </RelativeLayout>
+    
 </RelativeLayout>

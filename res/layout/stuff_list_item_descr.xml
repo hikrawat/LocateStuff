@@ -51,7 +51,7 @@
 		   	    android:layout_height="35dp"
 		   	    android:layout_width="35dp"
 		   	    android:scaleType="fitXY"
-		   	    android:src="@drawable/audio_alt_1"
+		   	    android:src="@drawable/play_audio"
 		   	    android:layout_marginRight="0dp"
 		   	    android:paddingTop="5dp"
 		   	    />
@@ -63,7 +63,7 @@
 	       android:textColor="@color/hyper_link_txt"
 	       android:singleLine="true"
 	       android:layout_marginLeft="10dp"
-	       android:text="@string/audio_text_eddit"
+	       android:text="@string/change_audio_text"
 	       android:paddingTop="0dp"/>
 	</LinearLayout>
 	

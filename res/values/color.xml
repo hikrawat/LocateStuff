@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <color name="app_background">#cccccc</color>
+    <color name="app_background">#ffffff</color>
     <color name="actionbar_background">#1590e8</color>
     <color name="no_stuff_label_color">#575757</color>
     <color name="green_button">#339100</color>
@@ -14,7 +14,7 @@
     <color name="image_border_color">#eeeeee</color>
     <color name="list_divider_color">#cccccc</color>
     <color name="hyper_link_txt">#0000ff</color>
-    
+    <color name="edit_image_txt">#ffffff</color>
     
     <!--  Remove these - FB Login -->
     <color name="black">#000000</color>
@@ -23,5 +23,9 @@
     <color name="bg_button_login">#A92815</color>
     
     <color name="game_item_game_title_grey">#37363c</color>
+    <color name="uneditable_text">#cccccc</color>
+    
+    <color name="stuff_item_separator">#cccccc</color>
+    <color name="audio_btn_background">#ececec</color>
 </resources>
 
